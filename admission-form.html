@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Universal College</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+    
+    <style>
+        .img-logo{
+            width: 315px;
+        }
+    </style>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img class="img-logo" src="https://ghatkopar.universalcollege.edu.in/wp-content/uploads/2020/02/MSG-SGKM-LOGO.png" alt="">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link ">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="admission-form.html" class="nav-item nav-link active">Admission</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="login.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block text-decoration-underline">Signup | Login</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Admission</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Admission</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h1 class="mb-5">Contact For Any Query</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form>
+                        <div class="row g-3">
+                            <h4>Personal Details</h4>
+                            <hr>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="first_name" name="first_name"
+                                        placeholder="First Name">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="middle_name" name="middle_name"
+                                        placeholder="Middle Name">
+                                    <label for="Middle_name">Middle Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="last_name" name="last_name"
+                                        placeholder="Last Name">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="mothers_name" name="mothers_name"
+                                        placeholder="Mother's Name">
+                                    <label for="mothers_name">Mother's Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gaurdian_number" name="gaurdian_number"
+                                        placeholder="Parent/Gaurdian Number">
+                                    <label for="gaurdian_number">Parent/Gaurdian Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select name="gender" class="form-control" id="gender" style="background-color: #fff;">
+                                        <option value="Select" disabled selected>Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="gender">Gender</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="dob" name="dob"
+                                        placeholder="Date of Birth">
+                                    <label for="dob">Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="student_contact_number"
+                                        placeholder="Contact Number" maxlength="10">
+                                    <label for="student_contact_number">Contact Number</label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="address" placeholder="Address"
+                                        id="address">
+                                    <label for="address">Address Line 1 <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="address" placeholder="Address"
+                                        id="address">
+                                    <label for="address">Address Line 2 </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="pincode" name="pincode"
+                                        placeholder="Pincode" maxlength="6">
+                                    <label for="pincode">Pincode</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="country" name="country" value="India"
+                                        readonly="readonly"  style="background-color: #fff;">
+                                    <label for="country">Country</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select name="state" id="state" class="form-control" id="state" style="background-color: #fff;">
+
+                                        <option value="Select" disabled selected>Select State</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                        <option value="Daman and Diu">Daman and Diu</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Lakshadweep">Lakshadweep</option>
+                                        <option value="Puducherry">Puducherry</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                    <label for="state">State</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select name="city" class="form-control cities" id="city" required="required" style="background-color: #fff;">
+                                        <option value="" disabled selected>Select City</option>
+                                        <option value="2474">Achalpur</option>
+                                        <option value="2475">Aheri</option>
+                                        <option value="2476">Ahmadnagar Cantonment</option>
+                                        <option value="2477">Ahmadpur</option>
+                                        <option value="2478">Ahmednagar</option>
+                                        <option value="2479">Ajra</option>
+                                        <option value="2480">Akalkot</option>
+                                        <option value="2481">Akkalkuwa</option>
+                                        <option value="2482">Akola</option>
+                                        <option value="2483">Akot</option>
+                                        <option value="2484">Alandi</option>
+                                        <option value="2485">Alibag</option>
+                                        <option value="2486">Allapalli</option>
+                                        <option value="2487">Alore</option>
+                                        <option value="2488">Amalner</option>
+                                        <option value="2489">Ambad</option>
+                                        <option value="2490">Ambajogai</option>
+                                        <option value="2491">Ambernath</option>
+                                        <option value="2492">Ambivali Tarf Wankhal</option>
+                                        <option value="2493">Amgaon</option>
+                                        <option value="2494">Amravati</option>
+                                        <option value="2495">Anjangaon</option>
+                                        <option value="2496">Arvi</option>
+                                        <option value="2497">Ashta</option>
+                                        <option value="2498">Ashti</option>
+                                        <option value="2499">Aurangabad</option>
+                                        <option value="2500">Aurangabad Cantonment</option>
+                                        <option value="2501">Ausa</option>
+                                        <option value="2502">Babhulgaon</option>
+                                        <option value="2503">Badlapur</option>
+                                        <option value="2504">Balapur</option>
+                                        <option value="2505">Ballarpur</option>
+                                        <option value="2506">Baramati</option>
+                                        <option value="2507">Barshi</option>
+                                        <option value="2508">Basmat</option>
+                                        <option value="2509">Beed</option>
+                                        <option value="2510">Bhadravati</option>
+                                        <option value="2511">Bhagur</option>
+                                        <option value="2512">Bhandara</option>
+                                        <option value="2513">Bhigvan</option>
+                                        <option value="2514">Bhingar</option>
+                                        <option value="2515">Bhiwandi</option>
+                                        <option value="2516">Bhokhardan</option>
+                                        <option value="2517">Bhor</option>
+                                        <option value="2518">Bhosari</option>
+                                        <option value="2519">Bhum</option>
+                                        <option value="2520">Bhusawal</option>
+                                        <option value="2521">Bid</option>
+                                        <option value="2522">Biloli</option>
+                                        <option value="2523">Birwadi</option>
+                                        <option value="2524">Boisar</option>
+                                        <option value="2525">Bop Khel</option>
+                                        <option value="2526">Brahmapuri</option>
+                                        <option value="2527">Budhgaon</option>
+                                        <option value="2528">Buldana</option>
+                                        <option value="2529">Buldhana</option>
+                                        <option value="2530">Butibori</option>
+                                        <option value="2531">Chakan</option>
+                                        <option value="2532">Chalisgaon</option>
+                                        <option value="2533">Chandrapur</option>
+                                        <option value="2534">Chandur</option>
+                                        <option value="2535">Chandur Bazar</option>
+                                        <option value="2536">Chandvad</option>
+                                        <option value="2537">Chicholi</option>
+                                        <option value="2538">Chikhala</option>
+                                        <option value="2539">Chikhaldara</option>
+                                        <option value="2540">Chikhli</option>
+                                        <option value="2541">Chinchani</option>
+                                        <option value="2542">Chinchwad</option>
+                                        <option value="2543">Chiplun</option>
+                                        <option value="2544">Chopda</option>
+                                        <option value="2545">Dabhol</option>
+                                        <option value="2546">Dahance</option>
+                                        <option value="2547">Dahanu</option>
+                                        <option value="2548">Daharu</option>
+                                        <option value="2549">Dapoli Camp</option>
+                                        <option value="2550">Darwa</option>
+                                        <option value="2551">Daryapur</option>
+                                        <option value="2552">Dattapur</option>
+                                        <option value="2553">Daund</option>
+                                        <option value="2554">Davlameti</option>
+                                        <option value="2555">Deglur</option>
+                                        <option value="2556">Dehu Road</option>
+                                        <option value="2557">Deolali</option>
+                                        <option value="2558">Deolali Pravara</option>
+                                        <option value="2559">Deoli</option>
+                                        <option value="2560">Desaiganj</option>
+                                        <option value="2561">Deulgaon Raja</option>
+                                        <option value="2562">Dewhadi</option>
+                                        <option value="2563">Dharangaon</option>
+                                        <option value="2564">Dharmabad</option>
+                                        <option value="2565">Dharur</option>
+                                        <option value="2566">Dhatau</option>
+                                        <option value="2567">Dhule</option>
+                                        <option value="2568">Digdoh</option>
+                                        <option value="2569">Diglur</option>
+                                        <option value="2570">Digras</option>
+                                        <option value="2571">Dombivli</option>
+                                        <option value="2572">Dondaicha</option>
+                                        <option value="2573">Dudhani</option>
+                                        <option value="2574">Durgapur</option>
+                                        <option value="2575">Dyane</option>
+                                        <option value="2576">Edandol</option>
+                                        <option value="2577">Eklahare</option>
+                                        <option value="2578">Faizpur</option>
+                                        <option value="2579">Fekari</option>
+                                        <option value="2580">Gadchiroli</option>
+                                        <option value="2581">Gadhinghaj</option>
+                                        <option value="2582">Gandhi Nagar</option>
+                                        <option value="2583">Ganeshpur</option>
+                                        <option value="2584">Gangakher</option>
+                                        <option value="2585">Gangapur</option>
+                                        <option value="2586">Gevrai</option>
+                                        <option value="2587">Ghatanji</option>
+                                        <option value="2588">Ghoti</option>
+                                        <option value="2589">Ghugus</option>
+                                        <option value="2590">Ghulewadi</option>
+                                        <option value="2591">Godoli</option>
+                                        <option value="2592">Gondia</option>
+                                        <option value="2593">Guhagar</option>
+                                        <option value="2594">Hadgaon</option>
+                                        <option value="2595">Harnai Beach</option>
+                                        <option value="2596">Hinganghat</option>
+                                        <option value="2597">Hingoli</option>
+                                        <option value="2598">Hupari</option>
+                                        <option value="2599">Ichalkaranji</option>
+                                        <option value="2600">Igatpuri</option>
+                                        <option value="2601">Indapur</option>
+                                        <option value="2602">Jaisinghpur</option>
+                                        <option value="2603">Jalgaon</option>
+                                        <option value="2604">Jalna</option>
+                                        <option value="2605">Jamkhed</option>
+                                        <option value="2606">Jawhar</option>
+                                        <option value="2607">Jaysingpur</option>
+                                        <option value="2608">Jejuri</option>
+                                        <option value="2609">Jintur</option>
+                                        <option value="2610">Junnar</option>
+                                        <option value="2611">Kabnur</option>
+                                        <option value="2612">Kagal</option>
+                                        <option value="2613">Kalamb</option>
+                                        <option value="2614">Kalamnuri</option>
+                                        <option value="2615">Kalas</option>
+                                        <option value="2616">Kalmeshwar</option>
+                                        <option value="2617">Kalundre</option>
+                                        <option value="2618">Kalyan</option>
+                                        <option value="2619">Kamthi</option>
+                                        <option value="2620">Kamthi Cantonment</option>
+                                        <option value="2621">Kandari</option>
+                                        <option value="2622">Kandhar</option>
+                                        <option value="2623">Kandri</option>
+                                        <option value="2624">Kandri II</option>
+                                        <option value="2625">Kanhan</option>
+                                        <option value="2626">Kankavli</option>
+                                        <option value="2627">Kannad</option>
+                                        <option value="2628">Karad</option>
+                                        <option value="2629">Karanja</option>
+                                        <option value="2630">Karanje Tarf</option>
+                                        <option value="2631">Karivali</option>
+                                        <option value="2632">Karjat</option>
+                                        <option value="2633">Karmala</option>
+                                        <option value="2634">Kasara Budruk</option>
+                                        <option value="2635">Katai</option>
+                                        <option value="2636">Katkar</option>
+                                        <option value="2637">Katol</option>
+                                        <option value="2638">Kegaon</option>
+                                        <option value="2639">Khadkale</option>
+                                        <option value="2640">Khadki</option>
+                                        <option value="2641">Khamgaon</option>
+                                        <option value="2642">Khapa</option>
+                                        <option value="2643">Kharadi</option>
+                                        <option value="2644">Kharakvasla</option>
+                                        <option value="2645">Khed</option>
+                                        <option value="2646">Kherdi</option>
+                                        <option value="2647">Khoni</option>
+                                        <option value="2648">Khopoli</option>
+                                        <option value="2649">Khuldabad</option>
+                                        <option value="2650">Kinwat</option>
+                                        <option value="2651">Kodoli</option>
+                                        <option value="2652">Kolhapur</option>
+                                        <option value="2653">Kon</option>
+                                        <option value="2654">Kondumal</option>
+                                        <option value="2655">Kopargaon</option>
+                                        <option value="2656">Kopharad</option>
+                                        <option value="2657">Koradi</option>
+                                        <option value="2658">Koregaon</option>
+                                        <option value="2659">Korochi</option>
+                                        <option value="2660">Kudal</option>
+                                        <option value="2661">Kundaim</option>
+                                        <option value="2662">Kundalwadi</option>
+                                        <option value="2663">Kurandvad</option>
+                                        <option value="2664">Kurduvadi</option>
+                                        <option value="2665">Kusgaon Budruk</option>
+                                        <option value="2666">Lanja</option>
+                                        <option value="2667">Lasalgaon</option>
+                                        <option value="2668">Latur</option>
+                                        <option value="2669">Loha</option>
+                                        <option value="2670">Lohegaon</option>
+                                        <option value="2671">Lonar</option>
+                                        <option value="2672">Lonavala</option>
+                                        <option value="2673">Madhavnagar</option>
+                                        <option value="2674">Mahabaleshwar</option>
+                                        <option value="2675">Mahad</option>
+                                        <option value="2676">Mahadula</option>
+                                        <option value="2677">Maindargi</option>
+                                        <option value="2678">Majalgaon</option>
+                                        <option value="2679">Malegaon</option>
+                                        <option value="2680">Malgaon</option>
+                                        <option value="2681">Malkapur</option>
+                                        <option value="2682">Malwan</option>
+                                        <option value="2683">Manadur</option>
+                                        <option value="2684">Manchar</option>
+                                        <option value="2685">Mangalvedhe</option>
+                                        <option value="2686">Mangrul Pir</option>
+                                        <option value="2687">Manmad</option>
+                                        <option value="2688">Manor</option>
+                                        <option value="2689">Mansar</option>
+                                        <option value="2690">Manwath</option>
+                                        <option value="2691">Mapuca</option>
+                                        <option value="2692">Matheran</option>
+                                        <option value="2693">Mehkar</option>
+                                        <option value="2694">Mhasla</option>
+                                        <option value="2695">Mhaswad</option>
+                                        <option value="2696">Mira Bhayandar</option>
+                                        <option value="2697">Miraj</option>
+                                        <option value="2698">Mohpa</option>
+                                        <option value="2699">Mohpada</option>
+                                        <option value="2700">Moram</option>
+                                        <option value="2701">Morshi</option>
+                                        <option value="2702">Mowad</option>
+                                        <option value="2703">Mudkhed</option>
+                                        <option value="2704">Mukhed</option>
+                                        <option value="2705">Mul</option>
+                                        <option value="2706">Mulshi</option>
+                                        <option value="2707">Mumbai</option>
+                                        <option value="2708">Murbad</option>
+                                        <option value="2709">Murgud</option>
+                                        <option value="2710">Murtijapur</option>
+                                        <option value="2711">Murud</option>
+                                        <option value="2712">Nachane</option>
+                                        <option value="2713">Nagardeole</option>
+                                        <option value="2714">Nagothane</option>
+                                        <option value="2715">Nagpur</option>
+                                        <option value="2716">Nakoda</option>
+                                        <option value="2717">Nalasopara</option>
+                                        <option value="2718">Naldurg</option>
+                                        <option value="2719">Nanded</option>
+                                        <option value="2720">Nandgaon</option>
+                                        <option value="2721">Nandura</option>
+                                        <option value="2722">Nandurbar</option>
+                                        <option value="2723">Narkhed</option>
+                                        <option value="2724">Nashik</option>
+                                        <option value="2725">Navapur</option>
+                                        <option value="2726">Navi Mumbai</option>
+                                        <option value="2727">Navi Mumbai Panvel</option>
+                                        <option value="2728">Neral</option>
+                                        <option value="2729">Nigdi</option>
+                                        <option value="2730">Nilanga</option>
+                                        <option value="2731">Nildoh</option>
+                                        <option value="2732">Nimbhore</option>
+                                        <option value="2733">Ojhar</option>
+                                        <option value="2734">Osmanabad</option>
+                                        <option value="2735">Pachgaon</option>
+                                        <option value="2736">Pachora</option>
+                                        <option value="2737">Padagha</option>
+                                        <option value="2738">Paithan</option>
+                                        <option value="2739">Palghar</option>
+                                        <option value="2740">Pali</option>
+                                        <option value="2741">Panchgani</option>
+                                        <option value="2742">Pandhakarwada</option>
+                                        <option value="2743">Pandharpur</option>
+                                        <option value="2744">Panhala</option>
+                                        <option value="2745">Panvel</option>
+                                        <option value="2746">Paranda</option>
+                                        <option value="2747">Parbhani</option>
+                                        <option value="2748">Parli</option>
+                                        <option value="2749">Parola</option>
+                                        <option value="2750">Partur</option>
+                                        <option value="2751">Pasthal</option>
+                                        <option value="2752">Patan</option>
+                                        <option value="2753">Pathardi</option>
+                                        <option value="2754">Pathri</option>
+                                        <option value="2755">Patur</option>
+                                        <option value="2756">Pawni</option>
+                                        <option value="2757">Pen</option>
+                                        <option value="2758">Pethumri</option>
+                                        <option value="2759">Phaltan</option>
+                                        <option value="2760">Pimpri</option>
+                                        <option value="2761">Poladpur</option>
+                                        <option value="2762">Pulgaon</option>
+                                        <option value="2763">Pune</option>
+                                        <option value="2764">Pune Cantonment</option>
+                                        <option value="2765">Purna</option>
+                                        <option value="2766">Purushottamnagar</option>
+                                        <option value="2767">Pusad</option>
+                                        <option value="2768">Rahimatpur</option>
+                                        <option value="2769">Rahta Pimplas</option>
+                                        <option value="2770">Rahuri</option>
+                                        <option value="2771">Raigad</option>
+                                        <option value="2772">Rajapur</option>
+                                        <option value="2773">Rajgurunagar</option>
+                                        <option value="2774">Rajur</option>
+                                        <option value="2775">Rajura</option>
+                                        <option value="2776">Ramtek</option>
+                                        <option value="2777">Ratnagiri</option>
+                                        <option value="2778">Ravalgaon</option>
+                                        <option value="2779">Raver</option>
+                                        <option value="2780">Revadanda</option>
+                                        <option value="2781">Risod</option>
+                                        <option value="2782">Roha Ashtami</option>
+                                        <option value="2783">Sakri</option>
+                                        <option value="2784">Sandor</option>
+                                        <option value="2785">Sangamner</option>
+                                        <option value="2786">Sangli</option>
+                                        <option value="2787">Sangole</option>
+                                        <option value="2788">Sasti</option>
+                                        <option value="2789">Sasvad</option>
+                                        <option value="2790">Satana</option>
+                                        <option value="2791">Satara</option>
+                                        <option value="2792">Savantvadi</option>
+                                        <option value="2793">Savda</option>
+                                        <option value="2794">Savner</option>
+                                        <option value="2795">Sawari Jawharnagar</option>
+                                        <option value="2796">Selu</option>
+                                        <option value="2797">Shahada</option>
+                                        <option value="2798">Shahapur</option>
+                                        <option value="2799">Shegaon</option>
+                                        <option value="2800">Shelar</option>
+                                        <option value="2801">Shendurjana</option>
+                                        <option value="2802">Shirdi</option>
+                                        <option value="2803">Shirgaon</option>
+                                        <option value="2804">Shirpur</option>
+                                        <option value="2805">Shirur</option>
+                                        <option value="2806">Shirwal</option>
+                                        <option value="2807">Shivatkar</option>
+                                        <option value="2808">Shrigonda</option>
+                                        <option value="2809">Shrirampur</option>
+                                        <option value="2810">Shrirampur Rural</option>
+                                        <option value="2811">Sillewada</option>
+                                        <option value="2812">Sillod</option>
+                                        <option value="2813">Sindhudurg</option>
+                                        <option value="2814">Sindi</option>
+                                        <option value="2815">Sindi Turf Hindnagar</option>
+                                        <option value="2816">Sindkhed Raja</option>
+                                        <option value="2817">Singnapur</option>
+                                        <option value="2818">Sinnar</option>
+                                        <option value="2819">Sirur</option>
+                                        <option value="2820">Sitasawangi</option>
+                                        <option value="2821">Solapur</option>
+                                        <option value="2822">Sonai</option>
+                                        <option value="2823">Sonegaon</option>
+                                        <option value="2824">Soyagaon</option>
+                                        <option value="2825">Srivardhan</option>
+                                        <option value="2826">Surgana</option>
+                                        <option value="2827">Talegaon Dabhade</option>
+                                        <option value="2828">Taloda</option>
+                                        <option value="2829">Taloja</option>
+                                        <option value="2830">Talwade</option>
+                                        <option value="2831">Tarapur</option>
+                                        <option value="2832">Tasgaon</option>
+                                        <option value="2833">Tathavade</option>
+                                        <option value="2834">Tekadi</option>
+                                        <option value="2835">Telhara</option>
+                                        <option value="2836">Thane</option>
+                                        <option value="2837">Tirira</option>
+                                        <option value="2838">Totaladoh</option>
+                                        <option value="2839">Trimbak</option>
+                                        <option value="2840">Tuljapur</option>
+                                        <option value="2841">Tumsar</option>
+                                        <option value="2842">Uchgaon</option>
+                                        <option value="2843">Udgir</option>
+                                        <option value="2844">Ulhasnagar</option>
+                                        <option value="2845">Umarga</option>
+                                        <option value="2846">Umarkhed</option>
+                                        <option value="2847">Umarsara</option>
+                                        <option value="2848">Umbar Pada Nandade</option>
+                                        <option value="2849">Umred</option>
+                                        <option value="2850">Umri Pragane Balapur</option>
+                                        <option value="2851">Uran</option>
+                                        <option value="2852">Uran Islampur</option>
+                                        <option value="2853">Utekhol</option>
+                                        <option value="2854">Vada</option>
+                                        <option value="2855">Vadgaon</option>
+                                        <option value="2856">Vadgaon Kasba</option>
+                                        <option value="2857">Vaijapur</option>
+                                        <option value="2858">Vanvadi</option>
+                                        <option value="2859">Varangaon</option>
+                                        <option value="2860">Vasai</option>
+                                        <option value="2861">Vasantnagar</option>
+                                        <option value="2862">Vashind</option>
+                                        <option value="2863">Vengurla</option>
+                                        <option value="2864">Virar</option>
+                                        <option value="2865">Visapur</option>
+                                        <option value="2866">Vite</option>
+                                        <option value="2867">Vithalwadi</option>
+                                        <option value="2868">Wadi</option>
+                                        <option value="2869">Waghapur</option>
+                                        <option value="2870">Wai</option>
+                                        <option value="2871">Wajegaon</option>
+                                        <option value="2872">Walani</option>
+                                        <option value="2873">Wanadongri</option>
+                                        <option value="2874">Wani</option>
+                                        <option value="2875">Wardha</option>
+                                        <option value="2876">Warora</option>
+                                        <option value="2877">Warthi</option>
+                                        <option value="2878">Warud</option>
+                                        <option value="2879">Washim</option>
+                                        <option value="2880">Yaval</option>
+                                        <option value="2881">Yavatmal</option>
+                                        <option value="2882">Yeola</option>
+                                        <option value="2883">Yerkheda</option>
+                                    </select>
+                                    <label for="city"> City</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="aadhar_card_number"
+                                        name="aadhar_card_number" placeholder="Aadhar Card Number">
+                                    <label for="aadhar_card_number">Aadhar Card Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="my_file" name="my_file"
+                                        placeholder="Upload File">
+                                    <label for="my_file">Upload File</label>
+                                </div>
+                            </div>
+                            <h4>Reservation Details</h4>
+                            <hr>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select name="caste" class="form-control" id="caste">
+                                        <option value="Select" disabled selected>Select Caste</option>
+                                        <option value="Open">Open</option>
+                                        <option value="OBC">OBC</option>
+                                        <option value="SC">SC</option>
+                                        <option value="ST">ST</option>
+                                        <option value="NT">NT</option>
+                                    </select>
+                                    <label for="caste">Caste</label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="my_file" name="my_file"
+                                        placeholder="Upload File">
+                                    <label for="my_file">Upload File</label>
+                                </div>
+                            </div>
+                            <br /><br />
+                            <h4>Educational Details</h4>
+                            <hr>
+                            <table style="width:100%">
+                                <tr>
+                                    <td text-align="center"><b>Sr#</b></td>
+                                    <td text-align="center"><b>Examination</b></td>
+                                    <td text-align="center"><b>Institute name</b></td>
+                                    <td text-align="center"><b>Board</b></td>
+                                    <td text-align="center"><b>Percentage</b></td>
+                                    <td text-align="center"><b>Year of Passing</b></td>
+                                    <td text-align="center"><b>Stream</b></td>
+                                </tr>
+
+                                <tr>
+                                    <td text-align="center">1</td>
+                                    <td text-align="center">Class X</td>
+                                    <td><input class="form-control" style="width: 250px;" type="text" name="Institution_name_X"/></td>
+                                    <td><input class="form-control" style="width: 250px;" type="text" name="ClassX_Board"/></td>
+                                    <td><input class="form-control" style="width: 100px;" type="text" name="ClassX_Percentage" maxlength="30" /></td>
+                                    <td><input class="form-control" style="width: 100px;" type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+                                    <td><input class="form-control text-center" style="width: 100px;" type="text" name="Stream_X" maxlength="10" disabled value="-"/></td>
+                                </tr>
+                                <tr><td colspan="7">&nbsp;</td></tr>
+                                <tr>
+                                    <td text-align="center">2</td>
+                                    <td text-align="center">Class XII</td>
+                                    <td><input class="form-control" style="width: 250px;" type="text" name="Institution_name_XII" /></td>
+                                    <td><input class="form-control" style="width: 250px;" type="text" name="ClassXII_Board" /></td>
+                                    <td><input class="form-control" style="width: 100px;" type="text" name="ClassXII_Percentage" /></td>
+                                    <td><input class="form-control" style="width: 100px;" type="text" name="ClassXII_YrOfPassing"  /></td>
+                                    <td><input class="form-control" style="width: 100px;" type="text" name="Stream_XII" /></td>
+                                </tr>
+                            </table>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="ssc_marksheet" name="ssc_marksheet"
+                                        placeholder="Upload File ">
+                                    <label for="ssc_marksheet">Upload SSC Marksheet</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="hsc_marksheet" name="hsc_marksheet"
+                                        placeholder="Upload File">
+                                    <label for="hsc_marksheet">Upload HSC Marksheet</label>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-white mb-3">Quick Link</h4>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <a class="btn btn-link" href="admission-form.html">Admissions</a>
+                <a class="btn btn-link" href="courses.html">Courses</a>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h4 class="text-white mb-3">Contact</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Ghatkopar (East), Mumbai 400 077</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 91369 81250</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info.msg@universalcollege.edu.in</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/UniversalMSGSGKMCollege/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/universalmsgsgkmcollege/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">MSG–SGKM College</a>, All Right Reserved.
+
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom" href="#">Anagha Gaikar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

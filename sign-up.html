@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="YashussUnlimited is responsive bootstrap 4 Modular and Demographic Dashboard template, Website Components, and Authentication Module. YashussUnlimited template is super flexible, powerful, clean &amp; easy to use.">
+    <meta name="keywords"
+        content="admin template, YashussUnlimited admin template, dashboard template, Modular template,Demographic Dashboard, responsive admin template, web app, website components, authentication module">
+    <meta name="author" content="YashussUnlimited">
+    <title>Universal College | Login</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+</head>
+
+<style>
+    @import url('https://rsms.me/inter/inter-ui.css');
+
+    ::selection {
+        background: #2D2F36;
+    }
+
+    ::-webkit-selection {
+        background: #2D2F36;
+    }
+
+    ::-moz-selection {
+        background: #2D2F36;
+    }
+
+    body {
+        /* background: white; */
+        font-family: 'Inter UI', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .page {
+        /* background: #e2e2e5; */
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 40px);
+        position: absolute;
+        place-content: center;
+        width: calc(100% - 40px);
+    }
+
+    @media (max-width: 767px) {
+        .page {
+            height: auto;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .container {
+        display: flex;
+        height: 320px;
+        margin: 0 auto;
+        width: 640px;
+    }
+
+    @media (max-width: 767px) {
+        .container {
+            flex-direction: column;
+            height: 630px;
+            width: 320px;
+        }
+    }
+
+    .left {
+        background: white;
+        height: calc(100% - 40px);
+        top: 20px;
+        position: relative;
+        width: 50%;
+    }
+
+    @media (max-width: 767px) {
+        .left {
+            height: 100%;
+            left: 20px;
+            width: calc(100% - 40px);
+            max-height: 270px;
+        }
+    }
+
+    .login {
+        font-size: 50px;
+        font-weight: 900;
+        margin: 25px 40px 40px;
+    }
+
+    .eula {
+        color: #999;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 40px;
+    }
+
+    .right {
+        background: #474A59;
+        box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+        color: #F1F1F2;
+        position: relative;
+        width: 50%;
+    }
+
+    @media (max-width: 767px) {
+        .right {
+            flex-shrink: 0;
+            height: 100%;
+            width: 100%;
+            max-height: 350px;
+        }
+    }
+
+    svg {
+        position: absolute;
+        width: 320px;
+    }
+
+    path {
+        fill: none;
+        stroke: url(#linearGradient);
+        ;
+        stroke-width: 4;
+        stroke-dasharray: 240 1386;
+    }
+
+    .form {
+        margin: 40px;
+        position: absolute;
+    }
+
+    label {
+        color: #c2c2c5;
+        display: block;
+        font-size: 14px;
+        height: 16px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        background: transparent;
+        border: 0;
+        color: #f2f2f2;
+        font-size: 20px;
+        height: 30px;
+        line-height: 30px;
+        outline: none !important;
+        width: 100%;
+    }
+
+    input::-moz-focus-inner {
+        border: 0;
+    }
+
+    #submit {
+        color: #707075;
+        margin-top: 40px;
+        transition: color 300ms;
+    }
+
+    #submit:focus {
+        color: #f2f2f2;
+    }
+
+    #submit:active {
+        color: #d0d0d2;
+    }
+</style>
+
+<style>
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #221F2E;
+        overflow: hidden;
+    }
+
+    .bg .dotWrapper {
+        position: absolute;
+    }
+
+    .bg .dotWrapper-1 {
+        top: 92%;
+        left: 77%;
+        -webkit-animation: flying 67s ease-in-out -3.1s infinite alternate;
+        animation: flying 67s ease-in-out -3.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-2 {
+        top: 26%;
+        left: 93%;
+        -webkit-animation: flying 60s ease-in-out -5.3s infinite alternate;
+        animation: flying 60s ease-in-out -5.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-3 {
+        top: 68%;
+        left: 29%;
+        -webkit-animation: flying 31s ease-in-out -3.2s infinite alternate;
+        animation: flying 31s ease-in-out -3.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-4 {
+        top: 95%;
+        left: 24%;
+        -webkit-animation: flying 41s ease-in-out -9.8s infinite alternate;
+        animation: flying 41s ease-in-out -9.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-5 {
+        top: 90%;
+        left: 8%;
+        -webkit-animation: flying 68s ease-in-out -4.2s infinite alternate;
+        animation: flying 68s ease-in-out -4.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-6 {
+        top: 41%;
+        left: 23%;
+        -webkit-animation: flying 64s ease-in-out -5.6s infinite alternate;
+        animation: flying 64s ease-in-out -5.6s infinite alternate;
+    }
+
+    .bg .dotWrapper-7 {
+        top: 23%;
+        left: 31%;
+        -webkit-animation: flying 61s ease-in-out -9.4s infinite alternate;
+        animation: flying 61s ease-in-out -9.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-8 {
+        top: 95%;
+        left: 37%;
+        -webkit-animation: flying 39s ease-in-out -1.3s infinite alternate;
+        animation: flying 39s ease-in-out -1.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-9 {
+        top: 79%;
+        left: 73%;
+        -webkit-animation: flying 35s ease-in-out -2.4s infinite alternate;
+        animation: flying 35s ease-in-out -2.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-10 {
+        top: 51%;
+        left: 22%;
+        -webkit-animation: flying 61s ease-in-out -6.2s infinite alternate;
+        animation: flying 61s ease-in-out -6.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-11 {
+        top: 83%;
+        left: 14%;
+        -webkit-animation: flying 53s ease-in-out -7.1s infinite alternate;
+        animation: flying 53s ease-in-out -7.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-12 {
+        top: 52%;
+        left: 30%;
+        -webkit-animation: flying 68s ease-in-out -1.3s infinite alternate;
+        animation: flying 68s ease-in-out -1.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-13 {
+        top: 21%;
+        left: 54%;
+        -webkit-animation: flying 26s ease-in-out -5.3s infinite alternate;
+        animation: flying 26s ease-in-out -5.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-14 {
+        top: 17%;
+        left: 71%;
+        -webkit-animation: flying 35s ease-in-out -7.9s infinite alternate;
+        animation: flying 35s ease-in-out -7.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-15 {
+        top: 100%;
+        left: 76%;
+        -webkit-animation: flying 59s ease-in-out -6.5s infinite alternate;
+        animation: flying 59s ease-in-out -6.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-16 {
+        top: 63%;
+        left: 66%;
+        -webkit-animation: flying 38s ease-in-out -1.2s infinite alternate;
+        animation: flying 38s ease-in-out -1.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-17 {
+        top: 8%;
+        left: 8%;
+        -webkit-animation: flying 45s ease-in-out -8.8s infinite alternate;
+        animation: flying 45s ease-in-out -8.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-18 {
+        top: 84%;
+        left: 89%;
+        -webkit-animation: flying 43s ease-in-out -6.5s infinite alternate;
+        animation: flying 43s ease-in-out -6.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-19 {
+        top: 94%;
+        left: 63%;
+        -webkit-animation: flying 44s ease-in-out -3.3s infinite alternate;
+        animation: flying 44s ease-in-out -3.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-20 {
+        top: 24%;
+        left: 18%;
+        -webkit-animation: flying 61s ease-in-out -9.2s infinite alternate;
+        animation: flying 61s ease-in-out -9.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-21 {
+        top: 62%;
+        left: 54%;
+        -webkit-animation: flying 35s ease-in-out -9.2s infinite alternate;
+        animation: flying 35s ease-in-out -9.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-22 {
+        top: 45%;
+        left: 20%;
+        -webkit-animation: flying 44s ease-in-out -7.1s infinite alternate;
+        animation: flying 44s ease-in-out -7.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-23 {
+        top: 68%;
+        left: 52%;
+        -webkit-animation: flying 39s ease-in-out -5.8s infinite alternate;
+        animation: flying 39s ease-in-out -5.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-24 {
+        top: 53%;
+        left: 14%;
+        -webkit-animation: flying 60s ease-in-out -4.6s infinite alternate;
+        animation: flying 60s ease-in-out -4.6s infinite alternate;
+    }
+
+    .bg .dotWrapper-25 {
+        top: 12%;
+        left: 32%;
+        -webkit-animation: flying 53s ease-in-out -1.3s infinite alternate;
+        animation: flying 53s ease-in-out -1.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-26 {
+        top: 27%;
+        left: 95%;
+        -webkit-animation: flying 33s ease-in-out -6.8s infinite alternate;
+        animation: flying 33s ease-in-out -6.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-27 {
+        top: 66%;
+        left: 17%;
+        -webkit-animation: flying 34s ease-in-out -3.4s infinite alternate;
+        animation: flying 34s ease-in-out -3.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-28 {
+        top: 84%;
+        left: 17%;
+        -webkit-animation: flying 61s ease-in-out -2.2s infinite alternate;
+        animation: flying 61s ease-in-out -2.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-29 {
+        top: 29%;
+        left: 47%;
+        -webkit-animation: flying 38s ease-in-out -2.2s infinite alternate;
+        animation: flying 38s ease-in-out -2.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-30 {
+        top: 90%;
+        left: 86%;
+        -webkit-animation: flying 59s ease-in-out -0.7s infinite alternate;
+        animation: flying 59s ease-in-out -0.7s infinite alternate;
+    }
+
+    .bg .dotWrapper-31 {
+        top: 22%;
+        left: 61%;
+        -webkit-animation: flying 39s ease-in-out -0.5s infinite alternate;
+        animation: flying 39s ease-in-out -0.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-32 {
+        top: 62%;
+        left: 89%;
+        -webkit-animation: flying 55s ease-in-out -3.2s infinite alternate;
+        animation: flying 55s ease-in-out -3.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-33 {
+        top: 44%;
+        left: 71%;
+        -webkit-animation: flying 32s ease-in-out -1.5s infinite alternate;
+        animation: flying 32s ease-in-out -1.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-34 {
+        top: 41%;
+        left: 4%;
+        -webkit-animation: flying 68s ease-in-out -7.1s infinite alternate;
+        animation: flying 68s ease-in-out -7.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-35 {
+        top: 92%;
+        left: 76%;
+        -webkit-animation: flying 62s ease-in-out -3.7s infinite alternate;
+        animation: flying 62s ease-in-out -3.7s infinite alternate;
+    }
+
+    .bg .dotWrapper-36 {
+        top: 33%;
+        left: 20%;
+        -webkit-animation: flying 38s ease-in-out -8.4s infinite alternate;
+        animation: flying 38s ease-in-out -8.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-37 {
+        top: 43%;
+        left: 44%;
+        -webkit-animation: flying 46s ease-in-out -6.9s infinite alternate;
+        animation: flying 46s ease-in-out -6.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-38 {
+        top: 53%;
+        left: 83%;
+        -webkit-animation: flying 35s ease-in-out -1.6s infinite alternate;
+        animation: flying 35s ease-in-out -1.6s infinite alternate;
+    }
+
+    .bg .dotWrapper-39 {
+        top: 10%;
+        left: 31%;
+        -webkit-animation: flying 46s ease-in-out -9s infinite alternate;
+        animation: flying 46s ease-in-out -9s infinite alternate;
+    }
+
+    .bg .dotWrapper-40 {
+        top: 56%;
+        left: 90%;
+        -webkit-animation: flying 54s ease-in-out -0.9s infinite alternate;
+        animation: flying 54s ease-in-out -0.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-41 {
+        top: 69%;
+        left: 25%;
+        -webkit-animation: flying 22s ease-in-out -1.7s infinite alternate;
+        animation: flying 22s ease-in-out -1.7s infinite alternate;
+    }
+
+    .bg .dotWrapper-42 {
+        top: 23%;
+        left: 4%;
+        -webkit-animation: flying 47s ease-in-out -1.8s infinite alternate;
+        animation: flying 47s ease-in-out -1.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-43 {
+        top: 36%;
+        left: 26%;
+        -webkit-animation: flying 50s ease-in-out -3.4s infinite alternate;
+        animation: flying 50s ease-in-out -3.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-44 {
+        top: 77%;
+        left: 72%;
+        -webkit-animation: flying 38s ease-in-out -2.3s infinite alternate;
+        animation: flying 38s ease-in-out -2.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-45 {
+        top: 22%;
+        left: 52%;
+        -webkit-animation: flying 65s ease-in-out -8.9s infinite alternate;
+        animation: flying 65s ease-in-out -8.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-46 {
+        top: 85%;
+        left: 40%;
+        -webkit-animation: flying 69s ease-in-out -9.6s infinite alternate;
+        animation: flying 69s ease-in-out -9.6s infinite alternate;
+    }
+
+    .bg .dotWrapper-47 {
+        top: 99%;
+        left: 35%;
+        -webkit-animation: flying 31s ease-in-out -9.5s infinite alternate;
+        animation: flying 31s ease-in-out -9.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-48 {
+        top: 55%;
+        left: 15%;
+        -webkit-animation: flying 50s ease-in-out -9.3s infinite alternate;
+        animation: flying 50s ease-in-out -9.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-49 {
+        top: 86%;
+        left: 83%;
+        -webkit-animation: flying 33s ease-in-out -6.9s infinite alternate;
+        animation: flying 33s ease-in-out -6.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-50 {
+        top: 96%;
+        left: 62%;
+        -webkit-animation: flying 28s ease-in-out -7s infinite alternate;
+        animation: flying 28s ease-in-out -7s infinite alternate;
+    }
+
+    .bg .dotWrapper-51 {
+        top: 94%;
+        left: 85%;
+        -webkit-animation: flying 68s ease-in-out -1.9s infinite alternate;
+        animation: flying 68s ease-in-out -1.9s infinite alternate;
+    }
+
+    .bg .dotWrapper-52 {
+        top: 25%;
+        left: 45%;
+        -webkit-animation: flying 50s ease-in-out -7.4s infinite alternate;
+        animation: flying 50s ease-in-out -7.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-53 {
+        top: 67%;
+        left: 75%;
+        -webkit-animation: flying 27s ease-in-out -5.3s infinite alternate;
+        animation: flying 27s ease-in-out -5.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-54 {
+        top: 79%;
+        left: 18%;
+        -webkit-animation: flying 51s ease-in-out -0.7s infinite alternate;
+        animation: flying 51s ease-in-out -0.7s infinite alternate;
+    }
+
+    .bg .dotWrapper-55 {
+        top: 14%;
+        left: 66%;
+        -webkit-animation: flying 57s ease-in-out -5.8s infinite alternate;
+        animation: flying 57s ease-in-out -5.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-56 {
+        top: 21%;
+        left: 63%;
+        -webkit-animation: flying 29s ease-in-out -3.1s infinite alternate;
+        animation: flying 29s ease-in-out -3.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-57 {
+        top: 58%;
+        left: 48%;
+        -webkit-animation: flying 32s ease-in-out -8.4s infinite alternate;
+        animation: flying 32s ease-in-out -8.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-58 {
+        top: 61%;
+        left: 79%;
+        -webkit-animation: flying 68s ease-in-out -9s infinite alternate;
+        animation: flying 68s ease-in-out -9s infinite alternate;
+    }
+
+    .bg .dotWrapper-59 {
+        top: 98%;
+        left: 44%;
+        -webkit-animation: flying 31s ease-in-out -8.1s infinite alternate;
+        animation: flying 31s ease-in-out -8.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-60 {
+        top: 98%;
+        left: 94%;
+        -webkit-animation: flying 29s ease-in-out -7.8s infinite alternate;
+        animation: flying 29s ease-in-out -7.8s infinite alternate;
+    }
+
+    .bg .dotWrapper-61 {
+        top: 84%;
+        left: 20%;
+        -webkit-animation: flying 33s ease-in-out -8.7s infinite alternate;
+        animation: flying 33s ease-in-out -8.7s infinite alternate;
+    }
+
+    .bg .dotWrapper-62 {
+        top: 4%;
+        left: 44%;
+        -webkit-animation: flying 26s ease-in-out -7.1s infinite alternate;
+        animation: flying 26s ease-in-out -7.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-63 {
+        top: 70%;
+        left: 73%;
+        -webkit-animation: flying 48s ease-in-out -2.1s infinite alternate;
+        animation: flying 48s ease-in-out -2.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-64 {
+        top: 14%;
+        left: 90%;
+        -webkit-animation: flying 51s ease-in-out -9.4s infinite alternate;
+        animation: flying 51s ease-in-out -9.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-65 {
+        top: 45%;
+        left: 88%;
+        -webkit-animation: flying 43s ease-in-out -3.1s infinite alternate;
+        animation: flying 43s ease-in-out -3.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-66 {
+        top: 12%;
+        left: 60%;
+        -webkit-animation: flying 58s ease-in-out -0.1s infinite alternate;
+        animation: flying 58s ease-in-out -0.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-67 {
+        top: 77%;
+        left: 76%;
+        -webkit-animation: flying 59s ease-in-out -4.5s infinite alternate;
+        animation: flying 59s ease-in-out -4.5s infinite alternate;
+    }
+
+    .bg .dotWrapper-68 {
+        top: 24%;
+        left: 76%;
+        -webkit-animation: flying 56s ease-in-out -5s infinite alternate;
+        animation: flying 56s ease-in-out -5s infinite alternate;
+    }
+
+    .bg .dotWrapper-69 {
+        top: 24%;
+        left: 21%;
+        -webkit-animation: flying 58s ease-in-out -3.2s infinite alternate;
+        animation: flying 58s ease-in-out -3.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-70 {
+        top: 9%;
+        left: 35%;
+        -webkit-animation: flying 65s ease-in-out -4.4s infinite alternate;
+        animation: flying 65s ease-in-out -4.4s infinite alternate;
+    }
+
+    .bg .dotWrapper-71 {
+        top: 74%;
+        left: 96%;
+        -webkit-animation: flying 30s ease-in-out -9.2s infinite alternate;
+        animation: flying 30s ease-in-out -9.2s infinite alternate;
+    }
+
+    .bg .dotWrapper-72 {
+        top: 55%;
+        left: 72%;
+        -webkit-animation: flying 46s ease-in-out -9.3s infinite alternate;
+        animation: flying 46s ease-in-out -9.3s infinite alternate;
+    }
+
+    .bg .dotWrapper-73 {
+        top: 22%;
+        left: 73%;
+        -webkit-animation: flying 41s ease-in-out -2.1s infinite alternate;
+        animation: flying 41s ease-in-out -2.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-74 {
+        top: 17%;
+        left: 23%;
+        -webkit-animation: flying 59s ease-in-out -8.1s infinite alternate;
+        animation: flying 59s ease-in-out -8.1s infinite alternate;
+    }
+
+    .bg .dotWrapper-75 {
+        top: 39%;
+        left: 89%;
+        -webkit-animation: flying 26s ease-in-out -3.7s infinite alternate;
+        animation: flying 26s ease-in-out -3.7s infinite alternate;
+    }
+
+    .bg .dot {
+        width: 4px;
+        height: 4px;
+        background: #FEA039;
+        border-radius: 50%;
+    }
+
+    .bg .dot-1 {
+        -webkit-transform-origin: 2px 7px;
+        transform-origin: 2px 7px;
+        -webkit-animation: rotating 17s ease-in-out -0.1s infinite;
+        animation: rotating 17s ease-in-out -0.1s infinite;
+    }
+
+    .bg .dot-2 {
+        -webkit-transform-origin: 6px -7px;
+        transform-origin: 6px -7px;
+        -webkit-animation: rotating 23s ease-in-out -7.7s infinite;
+        animation: rotating 23s ease-in-out -7.7s infinite;
+    }
+
+    .bg .dot-3 {
+        -webkit-transform-origin: -9px 2px;
+        transform-origin: -9px 2px;
+        -webkit-animation: rotating 18s ease-in-out -5.2s infinite;
+        animation: rotating 18s ease-in-out -5.2s infinite;
+    }
+
+    .bg .dot-4 {
+        -webkit-transform-origin: -13px 6px;
+        transform-origin: -13px 6px;
+        -webkit-animation: rotating 13s ease-in-out -6s infinite;
+        animation: rotating 13s ease-in-out -6s infinite;
+    }
+
+    .bg .dot-5 {
+        -webkit-transform-origin: -5px -1px;
+        transform-origin: -5px -1px;
+        -webkit-animation: rotating 30s ease-in-out -7s infinite;
+        animation: rotating 30s ease-in-out -7s infinite;
+    }
+
+    .bg .dot-6 {
+        -webkit-transform-origin: -11px 5px;
+        transform-origin: -11px 5px;
+        -webkit-animation: rotating 29s ease-in-out -9.3s infinite;
+        animation: rotating 29s ease-in-out -9.3s infinite;
+    }
+
+    .bg .dot-7 {
+        -webkit-transform-origin: 5px 8px;
+        transform-origin: 5px 8px;
+        -webkit-animation: rotating 24s ease-in-out -0.2s infinite;
+        animation: rotating 24s ease-in-out -0.2s infinite;
+    }
+
+    .bg .dot-8 {
+        -webkit-transform-origin: 5px 2px;
+        transform-origin: 5px 2px;
+        -webkit-animation: rotating 13s ease-in-out -6.1s infinite;
+        animation: rotating 13s ease-in-out -6.1s infinite;
+    }
+
+    .bg .dot-9 {
+        -webkit-transform-origin: -9px -4px;
+        transform-origin: -9px -4px;
+        -webkit-animation: rotating 11s ease-in-out -4.2s infinite;
+        animation: rotating 11s ease-in-out -4.2s infinite;
+    }
+
+    .bg .dot-10 {
+        -webkit-transform-origin: 1px 0px;
+        transform-origin: 1px 0px;
+        -webkit-animation: rotating 18s ease-in-out -4.8s infinite;
+        animation: rotating 18s ease-in-out -4.8s infinite;
+    }
+
+    .bg .dot-11 {
+        -webkit-transform-origin: -6px -6px;
+        transform-origin: -6px -6px;
+        -webkit-animation: rotating 13s ease-in-out -0.9s infinite;
+        animation: rotating 13s ease-in-out -0.9s infinite;
+    }
+
+    .bg .dot-12 {
+        -webkit-transform-origin: 15px 3px;
+        transform-origin: 15px 3px;
+        -webkit-animation: rotating 30s ease-in-out -9.2s infinite;
+        animation: rotating 30s ease-in-out -9.2s infinite;
+    }
+
+    .bg .dot-13 {
+        -webkit-transform-origin: 14px -12px;
+        transform-origin: 14px -12px;
+        -webkit-animation: rotating 14s ease-in-out -8.7s infinite;
+        animation: rotating 14s ease-in-out -8.7s infinite;
+    }
+
+    .bg .dot-14 {
+        -webkit-transform-origin: -8px 9px;
+        transform-origin: -8px 9px;
+        -webkit-animation: rotating 14s ease-in-out -5.9s infinite;
+        animation: rotating 14s ease-in-out -5.9s infinite;
+    }
+
+    .bg .dot-15 {
+        -webkit-transform-origin: 12px -6px;
+        transform-origin: 12px -6px;
+        -webkit-animation: rotating 27s ease-in-out -8.3s infinite;
+        animation: rotating 27s ease-in-out -8.3s infinite;
+    }
+
+    .bg .dot-16 {
+        -webkit-transform-origin: -6px -11px;
+        transform-origin: -6px -11px;
+        -webkit-animation: rotating 28s ease-in-out -9.2s infinite;
+        animation: rotating 28s ease-in-out -9.2s infinite;
+    }
+
+    .bg .dot-17 {
+        -webkit-transform-origin: 7px -11px;
+        transform-origin: 7px -11px;
+        -webkit-animation: rotating 12s ease-in-out -3.6s infinite;
+        animation: rotating 12s ease-in-out -3.6s infinite;
+    }
+
+    .bg .dot-18 {
+        -webkit-transform-origin: -13px -8px;
+        transform-origin: -13px -8px;
+        -webkit-animation: rotating 28s ease-in-out -3.6s infinite;
+        animation: rotating 28s ease-in-out -3.6s infinite;
+    }
+
+    .bg .dot-19 {
+        -webkit-transform-origin: 13px -9px;
+        transform-origin: 13px -9px;
+        -webkit-animation: rotating 25s ease-in-out -7.8s infinite;
+        animation: rotating 25s ease-in-out -7.8s infinite;
+    }
+
+    .bg .dot-20 {
+        -webkit-transform-origin: 15px -8px;
+        transform-origin: 15px -8px;
+        -webkit-animation: rotating 20s ease-in-out -6.6s infinite;
+        animation: rotating 20s ease-in-out -6.6s infinite;
+    }
+
+    .bg .dot-21 {
+        -webkit-transform-origin: -13px 8px;
+        transform-origin: -13px 8px;
+        -webkit-animation: rotating 16s ease-in-out -4s infinite;
+        animation: rotating 16s ease-in-out -4s infinite;
+    }
+
+    .bg .dot-22 {
+        -webkit-transform-origin: -6px 7px;
+        transform-origin: -6px 7px;
+        -webkit-animation: rotating 12s ease-in-out -2.7s infinite;
+        animation: rotating 12s ease-in-out -2.7s infinite;
+    }
+
+    .bg .dot-23 {
+        -webkit-transform-origin: 1px 11px;
+        transform-origin: 1px 11px;
+        -webkit-animation: rotating 22s ease-in-out -7.7s infinite;
+        animation: rotating 22s ease-in-out -7.7s infinite;
+    }
+
+    .bg .dot-24 {
+        -webkit-transform-origin: 1px 9px;
+        transform-origin: 1px 9px;
+        -webkit-animation: rotating 14s ease-in-out -2.6s infinite;
+        animation: rotating 14s ease-in-out -2.6s infinite;
+    }
+
+    .bg .dot-25 {
+        -webkit-transform-origin: -3px -7px;
+        transform-origin: -3px -7px;
+        -webkit-animation: rotating 15s ease-in-out -7.6s infinite;
+        animation: rotating 15s ease-in-out -7.6s infinite;
+    }
+
+    .bg .dot-26 {
+        -webkit-transform-origin: 10px -10px;
+        transform-origin: 10px -10px;
+        -webkit-animation: rotating 20s ease-in-out -3.6s infinite;
+        animation: rotating 20s ease-in-out -3.6s infinite;
+    }
+
+    .bg .dot-27 {
+        -webkit-transform-origin: 8px -8px;
+        transform-origin: 8px -8px;
+        -webkit-animation: rotating 17s ease-in-out -0.5s infinite;
+        animation: rotating 17s ease-in-out -0.5s infinite;
+    }
+
+    .bg .dot-28 {
+        -webkit-transform-origin: 12px -13px;
+        transform-origin: 12px -13px;
+        -webkit-animation: rotating 13s ease-in-out -2.1s infinite;
+        animation: rotating 13s ease-in-out -2.1s infinite;
+    }
+
+    .bg .dot-29 {
+        -webkit-transform-origin: 13px -1px;
+        transform-origin: 13px -1px;
+        -webkit-animation: rotating 19s ease-in-out -3.5s infinite;
+        animation: rotating 19s ease-in-out -3.5s infinite;
+    }
+
+    .bg .dot-30 {
+        -webkit-transform-origin: -10px 12px;
+        transform-origin: -10px 12px;
+        -webkit-animation: rotating 14s ease-in-out -5.2s infinite;
+        animation: rotating 14s ease-in-out -5.2s infinite;
+    }
+
+    .bg .dot-31 {
+        -webkit-transform-origin: 3px 8px;
+        transform-origin: 3px 8px;
+        -webkit-animation: rotating 25s ease-in-out -4.6s infinite;
+        animation: rotating 25s ease-in-out -4.6s infinite;
+    }
+
+    .bg .dot-32 {
+        -webkit-transform-origin: 9px -3px;
+        transform-origin: 9px -3px;
+        -webkit-animation: rotating 19s ease-in-out -2.8s infinite;
+        animation: rotating 19s ease-in-out -2.8s infinite;
+    }
+
+    .bg .dot-33 {
+        -webkit-transform-origin: 4px 9px;
+        transform-origin: 4px 9px;
+        -webkit-animation: rotating 26s ease-in-out -1.5s infinite;
+        animation: rotating 26s ease-in-out -1.5s infinite;
+    }
+
+    .bg .dot-34 {
+        -webkit-transform-origin: 15px 12px;
+        transform-origin: 15px 12px;
+        -webkit-animation: rotating 28s ease-in-out -3.1s infinite;
+        animation: rotating 28s ease-in-out -3.1s infinite;
+    }
+
+    .bg .dot-35 {
+        -webkit-transform-origin: -3px -5px;
+        transform-origin: -3px -5px;
+        -webkit-animation: rotating 30s ease-in-out -3.3s infinite;
+        animation: rotating 30s ease-in-out -3.3s infinite;
+    }
+
+    .bg .dot-36 {
+        -webkit-transform-origin: 8px 7px;
+        transform-origin: 8px 7px;
+        -webkit-animation: rotating 24s ease-in-out -9.9s infinite;
+        animation: rotating 24s ease-in-out -9.9s infinite;
+    }
+
+    .bg .dot-37 {
+        -webkit-transform-origin: -8px -13px;
+        transform-origin: -8px -13px;
+        -webkit-animation: rotating 11s ease-in-out -0.5s infinite;
+        animation: rotating 11s ease-in-out -0.5s infinite;
+    }
+
+    .bg .dot-38 {
+        -webkit-transform-origin: 13px -13px;
+        transform-origin: 13px -13px;
+        -webkit-animation: rotating 14s ease-in-out -5.4s infinite;
+        animation: rotating 14s ease-in-out -5.4s infinite;
+    }
+
+    .bg .dot-39 {
+        -webkit-transform-origin: -13px -13px;
+        transform-origin: -13px -13px;
+        -webkit-animation: rotating 29s ease-in-out -2.8s infinite;
+        animation: rotating 29s ease-in-out -2.8s infinite;
+    }
+
+    .bg .dot-40 {
+        -webkit-transform-origin: -10px -4px;
+        transform-origin: -10px -4px;
+        -webkit-animation: rotating 18s ease-in-out -7.1s infinite;
+        animation: rotating 18s ease-in-out -7.1s infinite;
+    }
+
+    .bg .dot-41 {
+        -webkit-transform-origin: -11px -5px;
+        transform-origin: -11px -5px;
+        -webkit-animation: rotating 28s ease-in-out -2.7s infinite;
+        animation: rotating 28s ease-in-out -2.7s infinite;
+    }
+
+    .bg .dot-42 {
+        -webkit-transform-origin: 10px 2px;
+        transform-origin: 10px 2px;
+        -webkit-animation: rotating 19s ease-in-out -2.3s infinite;
+        animation: rotating 19s ease-in-out -2.3s infinite;
+    }
+
+    .bg .dot-43 {
+        -webkit-transform-origin: -3px 10px;
+        transform-origin: -3px 10px;
+        -webkit-animation: rotating 24s ease-in-out -4s infinite;
+        animation: rotating 24s ease-in-out -4s infinite;
+    }
+
+    .bg .dot-44 {
+        -webkit-transform-origin: -1px -2px;
+        transform-origin: -1px -2px;
+        -webkit-animation: rotating 20s ease-in-out -1.7s infinite;
+        animation: rotating 20s ease-in-out -1.7s infinite;
+    }
+
+    .bg .dot-45 {
+        -webkit-transform-origin: -4px 4px;
+        transform-origin: -4px 4px;
+        -webkit-animation: rotating 30s ease-in-out -0.1s infinite;
+        animation: rotating 30s ease-in-out -0.1s infinite;
+    }
+
+    .bg .dot-46 {
+        -webkit-transform-origin: 15px 12px;
+        transform-origin: 15px 12px;
+        -webkit-animation: rotating 22s ease-in-out -1.7s infinite;
+        animation: rotating 22s ease-in-out -1.7s infinite;
+    }
+
+    .bg .dot-47 {
+        -webkit-transform-origin: -11px 14px;
+        transform-origin: -11px 14px;
+        -webkit-animation: rotating 15s ease-in-out -7.9s infinite;
+        animation: rotating 15s ease-in-out -7.9s infinite;
+    }
+
+    .bg .dot-48 {
+        -webkit-transform-origin: 13px -2px;
+        transform-origin: 13px -2px;
+        -webkit-animation: rotating 28s ease-in-out -5.4s infinite;
+        animation: rotating 28s ease-in-out -5.4s infinite;
+    }
+
+    .bg .dot-49 {
+        -webkit-transform-origin: -13px -2px;
+        transform-origin: -13px -2px;
+        -webkit-animation: rotating 29s ease-in-out -3.9s infinite;
+        animation: rotating 29s ease-in-out -3.9s infinite;
+    }
+
+    .bg .dot-50 {
+        -webkit-transform-origin: -2px 5px;
+        transform-origin: -2px 5px;
+        -webkit-animation: rotating 14s ease-in-out -6s infinite;
+        animation: rotating 14s ease-in-out -6s infinite;
+    }
+
+    @-webkit-keyframes rotating {
+        0% {
+            opacity: 0;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        25%,
+        75% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotating {
+        0% {
+            opacity: 0;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        25%,
+        75% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes flying {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        10% {
+            -webkit-transform: translate(20px, 50px);
+            transform: translate(20px, 50px);
+        }
+
+        20% {
+            -webkit-transform: translate(-30px, 10px);
+            transform: translate(-30px, 10px);
+        }
+
+        30% {
+            -webkit-transform: translate(10px, 60px);
+            transform: translate(10px, 60px);
+        }
+
+        40% {
+            -webkit-transform: translate(50px, 0px);
+            transform: translate(50px, 0px);
+        }
+
+        50% {
+            -webkit-transform: translate(-10px, -40px);
+            transform: translate(-10px, -40px);
+        }
+
+        60% {
+            -webkit-transform: translate(-40px, 20px);
+            transform: translate(-40px, 20px);
+        }
+
+        70% {
+            -webkit-transform: translate(30px, -30px);
+            transform: translate(30px, -30px);
+        }
+
+        80% {
+            -webkit-transform: translate(0px, -60px);
+            transform: translate(0px, -60px);
+        }
+
+        90% {
+            -webkit-transform: translate(40px, 10px);
+            transform: translate(40px, 10px);
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes flying {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        10% {
+            -webkit-transform: translate(20px, 50px);
+            transform: translate(20px, 50px);
+        }
+
+        20% {
+            -webkit-transform: translate(-30px, 10px);
+            transform: translate(-30px, 10px);
+        }
+
+        30% {
+            -webkit-transform: translate(10px, 60px);
+            transform: translate(10px, 60px);
+        }
+
+        40% {
+            -webkit-transform: translate(50px, 0px);
+            transform: translate(50px, 0px);
+        }
+
+        50% {
+            -webkit-transform: translate(-10px, -40px);
+            transform: translate(-10px, -40px);
+        }
+
+        60% {
+            -webkit-transform: translate(-40px, 20px);
+            transform: translate(-40px, 20px);
+        }
+
+        70% {
+            -webkit-transform: translate(30px, -30px);
+            transform: translate(30px, -30px);
+        }
+
+        80% {
+            -webkit-transform: translate(0px, -60px);
+            transform: translate(0px, -60px);
+        }
+
+        90% {
+            -webkit-transform: translate(40px, 10px);
+            transform: translate(40px, 10px);
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+</style>
+
+<body>
+    <div class="bg">
+        <div class="dotWrapper dotWrapper-1">
+            <div class="dot dot-1"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-2">
+            <div class="dot dot-2"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-3">
+            <div class="dot dot-3"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-4">
+            <div class="dot dot-4"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-5">
+            <div class="dot dot-5"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-6">
+            <div class="dot dot-6"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-7">
+            <div class="dot dot-7"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-8">
+            <div class="dot dot-8"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-9">
+            <div class="dot dot-9"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-10">
+            <div class="dot dot-10"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-11">
+            <div class="dot dot-11"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-12">
+            <div class="dot dot-12"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-13">
+            <div class="dot dot-13"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-14">
+            <div class="dot dot-14"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-15">
+            <div class="dot dot-15"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-16">
+            <div class="dot dot-16"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-17">
+            <div class="dot dot-17"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-18">
+            <div class="dot dot-18"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-19">
+            <div class="dot dot-19"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-20">
+            <div class="dot dot-20"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-21">
+            <div class="dot dot-21"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-22">
+            <div class="dot dot-22"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-23">
+            <div class="dot dot-23"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-24">
+            <div class="dot dot-24"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-25">
+            <div class="dot dot-25"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-26">
+            <div class="dot dot-26"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-27">
+            <div class="dot dot-27"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-28">
+            <div class="dot dot-28"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-29">
+            <div class="dot dot-29"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-30">
+            <div class="dot dot-30"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-31">
+            <div class="dot dot-31"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-32">
+            <div class="dot dot-32"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-33">
+            <div class="dot dot-33"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-34">
+            <div class="dot dot-34"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-35">
+            <div class="dot dot-35"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-36">
+            <div class="dot dot-36"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-37">
+            <div class="dot dot-37"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-38">
+            <div class="dot dot-38"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-39">
+            <div class="dot dot-39"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-40">
+            <div class="dot dot-40"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-41">
+            <div class="dot dot-41"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-42">
+            <div class="dot dot-42"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-43">
+            <div class="dot dot-43"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-44">
+            <div class="dot dot-44"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-45">
+            <div class="dot dot-45"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-46">
+            <div class="dot dot-46"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-47">
+            <div class="dot dot-47"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-48">
+            <div class="dot dot-48"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-49">
+            <div class="dot dot-49"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-50">
+            <div class="dot dot-50"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-51">
+            <div class="dot dot-51"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-52">
+            <div class="dot dot-52"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-53">
+            <div class="dot dot-53"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-54">
+            <div class="dot dot-54"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-55">
+            <div class="dot dot-55"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-56">
+            <div class="dot dot-56"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-57">
+            <div class="dot dot-57"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-58">
+            <div class="dot dot-58"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-59">
+            <div class="dot dot-59"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-60">
+            <div class="dot dot-60"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-61">
+            <div class="dot dot-61"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-62">
+            <div class="dot dot-62"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-63">
+            <div class="dot dot-63"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-64">
+            <div class="dot dot-64"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-65">
+            <div class="dot dot-65"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-66">
+            <div class="dot dot-66"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-67">
+            <div class="dot dot-67"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-68">
+            <div class="dot dot-68"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-69">
+            <div class="dot dot-69"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-70">
+            <div class="dot dot-70"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-71">
+            <div class="dot dot-71"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-72">
+            <div class="dot dot-72"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-73">
+            <div class="dot dot-73"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-74">
+            <div class="dot dot-74"></div>
+        </div>
+        <div class="dotWrapper dotWrapper-75">
+            <div class="dot dot-75"></div>
+        </div>
+    </div>
+    <style>
+        .img-logo{
+            width: 235px;
+        }
+    </style>
+    <div class="page">
+        <div class="container">
+            <div class="left">
+                <div class="login">
+                    <img class="img-logo" src="https://ghatkopar.universalcollege.edu.in/wp-content/uploads/2020/02/MSG-SGKM-LOGO.png" alt=""></div>
+                <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read
+                    <hr>
+                    <a href="login.html" class="ml-4">Already Registered | Login</a>
+                </div>
+            </div>
+            <div class="right">
+                <svg viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient inkscape:collect="always" id="linearGradient" x1="13" y1="193.49992" x2="307"
+                            y2="193.49992" gradientUnits="userSpaceOnUse">
+                            <stop style="stop-color:#ff00ff;" offset="0" id="stop876" />
+                            <stop style="stop-color:#ff0000;" offset="1" id="stop878" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                </svg>
+                <div class="form">
+                    <label for="email">Enter Email</label>
+                    <input type="email" id="email">
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var current = null;
+        document.querySelector('#email').addEventListener('focus', function (e) {
+            if (current) current.pause();
+            current = anime({
+                targets: 'path',
+                strokeDashoffset: {
+                    value: 0,
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                },
+                strokeDasharray: {
+                    value: '240 1386',
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                }
+            });
+        });
+        document.querySelector('#password').addEventListener('focus', function (e) {
+            if (current) current.pause();
+            current = anime({
+                targets: 'path',
+                strokeDashoffset: {
+                    value: -336,
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                },
+                strokeDasharray: {
+                    value: '240 1386',
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                }
+            });
+        });
+        document.querySelector('#submit').addEventListener('focus', function (e) {
+            if (current) current.pause();
+            current = anime({
+                targets: 'path',
+                strokeDashoffset: {
+                    value: -730,
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                },
+                strokeDasharray: {
+                    value: '530 1386',
+                    duration: 700,
+                    easing: 'easeOutQuart'
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
